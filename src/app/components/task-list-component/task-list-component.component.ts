@@ -16,7 +16,7 @@ export class TaskListComponent {
   tasks: Task[] = [];
   filteredTasks: Task[] = [];
   filter: 'all' | 'completed' | 'pending' = 'all';
-searchQuery: any;
+  searchQuery: any;
 
   constructor(private taskService: TaskService, private router: Router) {
     this.taskService.tasks$.subscribe(tasks => {

@@ -19,14 +19,13 @@ export class TaskFormComponent {
   constructor(private taskService: TaskService, private router: Router, private route: ActivatedRoute) {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      const existingTask = this.taskService.getTaskById(+id);
+      const existingTask = this.taskService.getTaskById(id);
       if (existingTask) {
         this.task = { ...existingTask };
         this.isEdit = true;
       }
     }
   }
-  
 
   submitForm() {
     if (this.isEdit && this.task.id != null) {
