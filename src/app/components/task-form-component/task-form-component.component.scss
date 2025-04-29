@@ -1,0 +1,158 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif; // Use a clean sans-serif font for better readability
+}
+
+.task-form {
+  padding: 20px;
+  background-color: #1e1e2f; // Dark background for the form container
+  border-radius: 8px;
+  color: #fff; 
+  min-height: 100vh; // Ensure the container occupies the full viewport height
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin-bottom: 20px;
+    color: #fff; // White text for headers
+  }
+
+  input, textarea, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #444; // Darker border for inputs
+    border-radius: 4px;
+    background-color: #2c2c38; // Darker background for inputs
+    color: #fff; // White text for inputs
+  }
+
+  .btn {
+    padding: 8px 12px;  
+    width: 20%;
+    margin: 5px auto; // Center the button
+    background-color: #28a745; // Green background for buttons
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #218838; // Darker green on hover
+    }
+  }
+}
+
+.task-list {
+  padding: 20px;
+  background-color: #1e1e2f; // Dark background for the container
+  border-radius: 8px;
+
+  h1 {
+    margin-bottom: 20px;
+    color: #fff; // White text for headers
+  }
+
+  .section-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #2c2c38; // Darker background for section headers
+    border-radius: 4px;
+  }
+
+  .table-container {
+    background-color: #2c2c38;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff; // White text for table content
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #444; // Darker border for table cells
+      text-align: left;
+    }
+
+    th {
+      background-color: #3a3a4a; // Darker background for headers
+      color: #fff; // White text for headers
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #1e1e2f; // Dark background for table rows
+    }
+
+    .status {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .status.done {
+      background-color: #28a745; // Green for "Done"
+      color: white;
+    }
+
+    .status.in-progress {
+      background-color: #ffc107; // Yellow for "In Progress"
+      color: black;
+    }
+
+    .status.stuck {
+      background-color: #dc3545; // Red for "Stuck"
+      color: white;
+    }
+
+    .priority {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .priority.high {
+      background-color: #dc3545; // Red for "High"
+      color: white;
+    }
+
+    .priority.medium {
+      background-color: #ffc107; // Yellow for "Medium"
+      color: black;
+    }
+
+    .priority.low {
+      background-color: #28a745; // Green for "Low"
+      color: white;
+    }
+  }
+
+  .btn {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3; // Darker blue on hover
+    }
+  }
+}

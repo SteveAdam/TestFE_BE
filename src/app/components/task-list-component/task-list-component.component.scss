@@ -1,0 +1,109 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.task-list {
+  padding: 20px;
+  background-color: #1e1e2f; // Dark background for the container
+  border-radius: 8px;
+  min-height: 100vh; // Ensure the container occupies the full viewport height
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+      margin-bottom: 20px;
+      color: #fff; // White text for headers
+  }
+
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #fff; // White text for table content
+
+      th, td {
+          padding: 10px;
+          border: 1px solid #444; // Darker border for table cells
+          text-align: left;
+      }
+
+      th {
+          background-color: #2c2c38; // Darker background for headers
+          color: #fff; // White text for headers
+          font-weight: bold;
+      }
+
+      td {
+          background-color: #1e1e2f; // Dark background for table rows
+      }
+
+      td .btn{
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+
+      .status {
+          display: inline-block;
+          padding: 5px 10px;
+          border-radius: 12px;
+          font-size: 12px;
+          font-weight: bold;
+          text-align: center;
+      }
+
+      .status.done {
+          background-color: #28a745; // Green for "Done"
+          color: white;
+      }
+
+      .status.in-progress {
+          background-color: #ffc107; // Yellow for "In Progress"
+          color: black;
+      }
+
+      .status.stuck {
+          background-color: #dc3545; // Red for "Stuck"
+          color: white;
+      }
+
+      .priority {
+          display: inline-block;
+          padding: 5px 10px;
+          border-radius: 12px;
+          font-size: 12px;
+          font-weight: bold;
+          text-align: center;
+      }
+
+      .priority.high {
+          background-color: #dc3545; // Red for "High"
+          color: white;
+      }
+
+      .priority.medium {
+          background-color: #ffc107; // Yellow for "Medium"
+          color: black;
+      }
+
+      .priority.low {
+          background-color: #28a745; // Green for "Low"
+          color: white;
+      }
+  }
+
+  .section-header {
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #2c2c38; // Darker background for section headers
+      border-radius: 4px;
+  }
+}

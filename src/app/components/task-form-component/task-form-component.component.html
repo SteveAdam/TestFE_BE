@@ -1,0 +1,66 @@
+<style>
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+</style>
+
+<form (ngSubmit)="submitForm()" #taskForm="ngForm" class="task-form" novalidate>
+  <h1>{{ isEdit ? 'Edit' : 'Add' }} Task</h1>
+
+  <input 
+    [(ngModel)]="task.title" 
+    name="title" 
+    placeholder="Title" 
+    required 
+    #title="ngModel" 
+  />
+  <div *ngIf="title.invalid && title.touched" class="error">
+    Title is required.
+  </div>
+
+  <textarea 
+    [(ngModel)]="task.description" 
+    name="description" 
+    placeholder="Description" 
+    required 
+    #description="ngModel"
+  ></textarea>
+  <div *ngIf="description.invalid && description.touched" class="error">
+    Description is required.
+  </div>
+
+  <input 
+    type="date" 
+    [(ngModel)]="task.dueDate" 
+    name="dueDate" 
+    [min]="today" 
+    required 
+    #dueDate="ngModel"
+  />
+  <div *ngIf="dueDate.invalid && dueDate.touched" class="error, py-2" >
+    Due date is required and cannot be in the past.
+  </div>
+
+  <select 
+    [(ngModel)]="task.status" 
+    name="status" 
+    aria-placeholder="Status"
+    required 
+    #status="ngModel"
+  >
+    <option [value]="false">Pending</option>
+    <option [value]="true">Completed</option>
+  </select>
+  <div *ngIf="status.invalid && status.touched" class="error">
+    Status is required.
+  </div>
+
+  <button 
+    type="submit" 
+    class="btn" 
+    [disabled]="taskForm.invalid"
+  >
+    Save Task
+  </button>
+</form>
