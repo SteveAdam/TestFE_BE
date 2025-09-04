@@ -1,4 +1,4 @@
-# TestFEBE
+# Task Manager
 
 This project is a task management application designed to help users organize and track their tasks efficiently. It provides features such as task creation, editing, and deletion, along with a user-friendly interface.
 
